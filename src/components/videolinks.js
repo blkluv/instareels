@@ -1,7 +1,7 @@
 const videolinks = [
   {
     id: 1,
-    src: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+    src: "https://gateway.pinata.cloud/ipfs/bafybeifshjufs7nxee4odxtkhlwabu4soxnwqlwv3xdqhrrpbapsvgbxgy",
     tags: [
       "#nature",
       "#wildlife",
