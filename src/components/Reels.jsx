@@ -67,11 +67,11 @@ const Reel = ({
   };
 
   return (
-    <div className="relative w-full h-screen flex justify-center items-center bg-black border-4 border-white shadow-lg p-4 box-border">
+    <div className="box-border relative flex items-center justify-center w-full h-screen p-4 bg-black border-4 border-white shadow-lg">
       <video
         ref={videoRef}
         src={src}
-        className="w-full h-full object-contain cursor-pointer rounded-lg transition-opacity duration-300 ease-in-out"
+        className="object-contain w-full h-full transition-opacity duration-300 ease-in-out rounded-lg cursor-pointer"
         loop
         muted={isMuted}
         playsInline
@@ -85,7 +85,7 @@ const Reel = ({
           initial={{ scale: 1, opacity: 0 }}
           transition={{ duration: 2 }}
         >
-          <FaThumbsUp className="text-sky-500 text-6xl" />
+          <FaThumbsUp className="text-6xl text-sky-500" />
         </motion.div>
       )}
 
@@ -97,17 +97,17 @@ const Reel = ({
           transition={{ duration: 2 }}
         >
           {isMuted ? (
-            <FaVolumeMute className="text-sky-500 text-6xl" />
+            <FaVolumeMute className="text-6xl text-sky-500" />
           ) : (
-            <FaVolumeUp className="text-sky-500 text-6xl" />
+            <FaVolumeUp className="text-6xl text-sky-500" />
           )}
         </motion.div>
       )}
 
-      <div className="absolute bottom-5 left-5 z-10 flex justify-center items-center gap-2">
+      <div className="absolute z-10 flex items-center justify-center gap-2 bottom-5 left-5">
         <motion.button
           onClick={handleMuteClick}
-          className="bg-black/50 text-white text-base px-4 py-2 rounded-md transition-colors duration-300 hover:bg-black/70"
+          className="px-4 py-2 text-base text-white transition-colors duration-300 rounded-md bg-black/50 hover:bg-black/70"
         >
           {isMuted ? "Unmute" : "Mute"}
         </motion.button>
@@ -125,25 +125,25 @@ const Reel = ({
 
         <motion.button
           onClick={onShare}
-          className="bg-black/50 text-white text-base px-4 py-2 rounded-md transition-colors duration-300 hover:bg-black/70"
+          className="px-4 py-2 text-base text-white transition-colors duration-300 rounded-md bg-black/50 hover:bg-black/70"
         >
           <FaShareAlt />
         </motion.button>
       </div>
 
       <motion.div
-        className="absolute top-10 left-5 bg-black/70 text-white px-4 py-2 text-base rounded-md"
+        className="absolute px-4 py-2 text-base text-white rounded-md top-10 left-5 bg-black/70"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
-        #AmazingReel id: {id}
+        #CASINOW3W id: {id}
       </motion.div>
-      <div className="absolute bottom-20 left-0 w-full bg-black/70 text-white px-4 py-2 text-sm rounded-md flex justify-center gap-2 flex-wrap">
+      <div className="absolute left-0 flex flex-wrap justify-center w-full gap-2 px-4 py-2 text-sm text-white rounded-md bottom-20 bg-black/70">
         {tags.map((tag, index) => (
           <span
             key={index}
-            className="text-blue-400 hover:text-blue-500 hover:underline cursor-pointer transition duration-200"
+            className="text-blue-400 transition duration-200 cursor-pointer hover:text-blue-500 hover:underline"
           >
             {tag}
           </span>
@@ -212,12 +212,12 @@ const Reels = () => {
   };
 
   const handleShare = (id) => {
-    const shareUrl = `https://insta-reels-one.vercel.app/video/`;
+    const shareUrl = `https://tv.casinow3w.com/video/`;
     if (navigator.share) {
       navigator
         .share({
-          title: "Check out this reel!",
-          text: "Check out this amazing video reel on Insta Reels!",
+          title: "Check out this Casino reel!",
+          text: "Check out this Casino video reel on CASINOW3W!",
           url: shareUrl,
         })
         .catch((err) => console.error("Share failed", err));
@@ -229,7 +229,7 @@ const Reels = () => {
   };
 
   return (
-    <div className="relative w-full min-h-screen overflow-y-auto p-0 m-0">
+    <div className="relative w-full min-h-screen p-0 m-0 overflow-y-auto">
       {reelsData.slice(0, loadedVideos).map((reel, index) => (
         <div key={reel.id} className="relative">
           <Reel
@@ -247,8 +247,8 @@ const Reels = () => {
       ))}
 
       {loading && (
-        <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center font-bold text-white z-50 flex justify-center items-center">
-          <div className="spinner-border animate-spin text-white" role="status">
+        <div className="fixed z-50 flex items-center justify-center font-bold text-center text-white transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
+          <div className="text-white spinner-border animate-spin" role="status">
             <span className="sr-only">Loading...</span>
           </div>
           Loading more reels...
