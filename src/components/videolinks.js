@@ -1,16 +1,16 @@
 const videolinks = [
   {
     id: 1,
-    src: "https://gateway.pinata.cloud/ipfs/bafybeifshjufs7nxee4odxtkhlwabu4soxnwqlwv3xdqhrrpbapsvgbxgy",
+    src: "https://gateway.pinata.cloud/ipfs/bafybeibohlyhgxkqt3ktuntmhivn76hhxy43zaik2qjsptteoqyc3ek6bi",
     tags: [
-      "///grudging.pester.bugs",
+      "4/20 ZALE ///rightfully.orientation.noses",
     ],
   },
   {
     id: 2,
-    src: "https://gateway.pinata.cloud/ipfs/bafybeiciyv2fl24em3aszernncoimgusvqg7v4qckbifny5zcbdfv74rla",
+    src: "https://gateway.pinata.cloud/ipfs/bafybeigtdepjlhqwzac3hrihtvulo3lrnohbboh2cgub7jmfsk53n6g2rq",
     tags: [
-      "///ants.sobs.gent",
+      "Z🅰️P DICE GAME",
     ],
   },
   {
